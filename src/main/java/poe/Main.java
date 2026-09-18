@@ -10,15 +10,15 @@ public class Main {
 
         System.out.println("=== Registration ===");
         System.out.print("Enter first name: ");
-        String firstName = scanner.nextLine();
+        String firstName = scanner.nextLine().trim();
         System.out.print("Enter last name: ");
-        String lastName = scanner.nextLine();
+        String lastName = scanner.nextLine().trim();
         System.out.print("Enter username: ");
-        String username = scanner.nextLine();
+        String username = scanner.nextLine().trim();
         System.out.print("Enter password: ");
-        String password = scanner.nextLine();
-        System.out.print("Enter South African cell phone number (e.g. +27838968976): ");
-        String cellPhoneNumber = scanner.nextLine();
+        String password = scanner.nextLine().trim();
+        System.out.print("Enter South African cell phone number (e.g. +27 066 260 5530): ");
+        String cellPhoneNumber = scanner.nextLine().trim();
 
         String registrationResult = login.registerUser(username, password, cellPhoneNumber, firstName, lastName);
         System.out.println(registrationResult);
@@ -35,9 +35,9 @@ public class Main {
 
         System.out.println("\n=== Login ===");
         System.out.print("Enter username: ");
-        String loginUsername = scanner.nextLine();
+        String loginUsername = scanner.nextLine().trim();
         System.out.print("Enter password: ");
-        String loginPassword = scanner.nextLine();
+        String loginPassword = scanner.nextLine().trim();
 
         boolean loginSuccessful = login.loginUser(loginUsername, loginPassword);
         System.out.println(login.returnLoginStatus(loginSuccessful));
